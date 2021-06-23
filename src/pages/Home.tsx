@@ -5,13 +5,20 @@ import logoImg from "../assets/images/logo.svg";
 import googleIconImg from "../assets/images/google-icon.svg";
 import loginIconImg from "../assets/images/login-icon.svg";
 
-import "../styles/auth.scss";
 import { Button } from "../components/Button";
+import { useAuth } from "../hooks/useAuth";
+
+import "../styles/auth.scss";
 
 export function Home() {
+  const { user, signInWithGoogle } = useAuth();
   const history = useHistory();
 
-  function navigateToNewRoom() {
+  async function handleCreateRoom() {
+    if (!user) {
+      await signInWithGoogle();
+    }
+
     history.push("/rooms/new");
   }
 
@@ -28,7 +35,7 @@ export function Home() {
           <button
             type="button"
             className="create-room"
-            onClick={navigateToNewRoom}
+            onClick={handleCreateRoom}
           >
             <img src={googleIconImg} alt="Logo do Google" />
             Crie sua sala com o Google
