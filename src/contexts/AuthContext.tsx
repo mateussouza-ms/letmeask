@@ -30,7 +30,6 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
           throw new Error("Missing information from Google Account");
         }
 
-        console.log(uid, displayName, photoURL);
         setUser({
           id: uid,
           name: displayName,
