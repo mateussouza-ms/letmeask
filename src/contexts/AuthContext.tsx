@@ -30,6 +30,7 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
           throw new Error("Missing information from Google Account");
         }
 
+        console.log(uid, displayName, photoURL);
         setUser({
           id: uid,
           name: displayName,
@@ -41,7 +42,7 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
     return () => {
       unsubscribe();
     };
-  }, [user]);
+  }, []);
 
   async function signInWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
