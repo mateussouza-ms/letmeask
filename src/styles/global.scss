@@ -5,13 +5,13 @@
 
   --var-color-purple: #835afd;
   --var-color-white: #fff;
-  --var-color-white-background: #f8f8f8;
+  --var-color-white-background: #e9e8e8;
   --var-color-red: #ea4335;
   --var-color-gray: #a8a8b3;
 }
 
 body {
-  background: #f8f8f8;
+  background: var(--var-color-white-background);
   color: #29292e;
 }
 
