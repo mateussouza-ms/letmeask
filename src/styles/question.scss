@@ -8,6 +8,19 @@
     margin-top: 0.5rem;
   }
 
+  &.highlighted {
+    background: #f4f0ff;
+    border: 1px solid var(--var-color-purple);
+
+    footer .user-info span {
+      color: #29292e;
+    }
+  }
+
+  &.answered {
+    background: #dbdcdd;
+  }
+
   p {
     color: #29292e;
   }
