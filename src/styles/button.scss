@@ -13,6 +13,12 @@
 
   transition: filter 0.2s;
 
+  &.outlined {
+    background: var(--var-color-white);
+    border: 1px solid var(--var-color-purple);
+    color: var(--var-color-purple);
+  }
+
   &:not(:disabled):hover {
     filter: brightness(0.9);
   }
