@@ -37,9 +37,11 @@ export function NewRoom() {
   return (
     <div id="page-auth">
       <aside>
-        <img src={illustrationImg} alt="Imagem de ilustração" />
-        <strong>Toda pergunta tem uma resposta.</strong>
-        <p>Aprenda e compartilhe conhecimento com outras pessoas.</p>
+        <div className="content">
+          <img src={illustrationImg} alt="Imagem de ilustração" />
+          <strong>Toda pergunta tem uma resposta.</strong>
+          <p>Aprenda e compartilhe conhecimento com outras pessoas.</p>
+        </div>
       </aside>
       <main>
         <div className="main-content">

@@ -19,3 +19,25 @@
     }
   }
 }
+
+@media (max-width: 750px) {
+  #page-auth main .main-content {
+    h2 {
+      margin: 1rem 0 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  #page-auth main .main-content {
+    h2 {
+      margin: 2.5rem 0 1.5rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: var(--var-color-gray);
+      margin-top: 1rem;
+    }
+  }
+}
