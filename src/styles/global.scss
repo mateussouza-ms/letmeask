@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
 
+:root {
   --var-color-purple: #835afd;
   --var-color-white: #fff;
   --var-color-white-background: #f1f1f1;
@@ -19,5 +21,15 @@ body,
 button,
 input,
 textarea {
-  font: 400 16px "Roboto", sans-serif;
+  font: 400 1rem "Roboto", sans-serif;
+}
+
+html {
+  transition: font-size 0.2s;
+}
+
+@media (max-width: 980px) {
+  html {
+    font-size: 87.5%;
+  }
 }

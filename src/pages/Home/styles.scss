@@ -10,32 +10,36 @@
     justify-content: center;
     background: var(--var-color-purple);
     color: var(--var-color-white);
-    padding: 7.5rem 5rem;
+    padding: 2rem 2rem;
 
-    img {
-      max-width: 320px;
-      max-height: 320px;
-    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
-    strong {
-      font: 700 2rem "Poppins", sans-serif;
-      line-height: 2.625rem;
-      margin-top: 1.5rem;
-    }
+      img {
+        max-width: 320px;
+        max-height: 320px;
+      }
 
-    p {
-      font-size: 1rem;
-      line-height: 2rem;
-      margin-top: 1rem;
-      color: var(--var-color-white-background);
+      strong {
+        font: 700 2rem "Poppins", sans-serif;
+        line-height: 2.625rem;
+        margin-top: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 2rem;
+        margin-top: 1rem;
+        color: var(--var-color-white-background);
+      }
     }
   }
 
   main {
     flex: 8;
-
     padding: 0 2rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,6 +120,98 @@
         button,
         input {
           width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 750px) {
+  #page-auth {
+    aside {
+      padding: 0 1rem;
+
+      .content {
+        img {
+          max-height: 120px;
+          align-self: center;
+        }
+
+        strong {
+          margin-top: 0.2rem;
+        }
+
+        p {
+          margin-top: 0;
+        }
+      }
+    }
+
+    main {
+      padding: 1rem 3rem;
+      flex: 7;
+      align-items: flex-start;
+
+      .main-content {
+        max-width: 100%;
+
+        > img {
+          max-height: 50px;
+        }
+
+        .create-room {
+          margin-top: 1rem;
+        }
+
+        .separator {
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  #page-auth {
+    flex-direction: column;
+    height: 90vh;
+
+    aside {
+      padding: 0.5rem 1rem;
+      flex: 5;
+
+      .content {
+        img {
+          max-height: 120px;
+          align-self: center;
+        }
+
+        strong {
+          margin-top: 0.2rem;
+        }
+
+        p {
+          margin-top: 0;
+        }
+      }
+    }
+
+    main {
+      padding: 0.5rem 3rem;
+      align-items: center;
+
+      .main-content {
+        max-width: 100%;
+
+        img {
+          max-height: 65px;
+        }
+
+        .create-room {
+          margin-top: 2rem;
+        }
+
+        .separator {
+          margin: 1rem 0;
         }
       }
     }
