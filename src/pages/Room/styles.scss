@@ -1,6 +1,7 @@
 #page-room {
+  padding: 1.5rem;
+
   header {
-    padding: 1.5rem;
     border-bottom: 1px solid #e2e2e2;
 
     .content {
@@ -12,15 +13,6 @@
 
       > img {
         max-height: 45px;
-      }
-
-      > div {
-        display: flex;
-        gap: 1rem;
-
-        button {
-          height: 40px;
-        }
       }
     }
   }

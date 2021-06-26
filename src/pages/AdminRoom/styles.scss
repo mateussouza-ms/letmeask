@@ -1,0 +1,10 @@
+#page-room {
+  header .content > div {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      height: 40px;
+    }
+  }
+}

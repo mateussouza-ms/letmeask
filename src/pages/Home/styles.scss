@@ -1,0 +1,123 @@
+#page-auth {
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+
+  aside {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--var-color-purple);
+    color: var(--var-color-white);
+    padding: 7.5rem 5rem;
+
+    img {
+      max-width: 320px;
+      max-height: 320px;
+    }
+
+    strong {
+      font: 700 2rem "Poppins", sans-serif;
+      line-height: 2.625rem;
+      margin-top: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 2rem;
+      margin-top: 1rem;
+      color: var(--var-color-white-background);
+    }
+  }
+
+  main {
+    flex: 8;
+
+    padding: 0 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+
+      > img {
+        align-self: center;
+      }
+
+      .create-room {
+        margin-top: 3rem;
+        padding: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        background: var(--var-color-red);
+        border: 0;
+        border-radius: 8px;
+        color: var(--var-color-white-background);
+        font-weight: 500;
+        cursor: pointer;
+
+        transition: filter 0.2s;
+
+        &:hover {
+          filter: brightness(0.9);
+        }
+      }
+
+      .separator {
+        margin: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 0.875rem;
+        color: var(--var-color-gray);
+
+        &::before {
+          content: "";
+          flex: 1;
+          height: 1px;
+          background: var(--var-color-gray);
+          margin-right: 1rem;
+        }
+
+        &::after {
+          content: "";
+          flex: 1;
+          height: 1px;
+          background: var(--var-color-gray);
+          margin-left: 1rem;
+        }
+      }
+
+      form {
+        input {
+          height: 3.125rem;
+          border-radius: 8px;
+          padding: 0 1rem;
+          background: var(--var-color-white-background);
+          border: 1px solid var(--var-color-gray);
+        }
+
+        button {
+          margin-top: 1rem;
+        }
+
+        button,
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
