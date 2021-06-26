@@ -1,7 +1,8 @@
 #page-room {
-  padding: 1.5rem;
+  padding: 0 1.5rem 1.5rem;
 
   header {
+    padding: 1.5rem 0;
     border-bottom: 1px solid #e2e2e2;
 
     .content {
@@ -10,6 +11,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 1rem;
 
       > img {
         max-height: 45px;
