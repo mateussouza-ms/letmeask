@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+# Letmeask
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## :information_source: Sobre o projeto
 
-## Available Scripts
+Este é um projeto desenvolvido na sexta edição do Next Level Week, um evento de programação realizado pela Rocketseat do dia 20 a 27 de junho de 2021.
+<br/> <br/>
 
-In the project directory, you can run:
+## :computer: Aplicação desenvolvida
 
-### `yarn start`
+Foi desenvolvida uma aplicação web com ReactJS e Firebase, utilizando funcionalidades interessantes do Firebase como recurso de autenticação com a conta do Google e banco de dados em tempo real. Foram aplicados muitos conceitos do React, como gerenciamento de estados, contextos com a Context API, utilização dos React Hooks e a criação de hooks próprios.
+<br/> A aplicação é uma ferramenta para auxilio na realização de lives. Serve para que criadores de conteúdo criem salas de perguntas para que os participantes possam entrar e fazer suas perguntas ao mesmo tempo em que vão respondendo ao vivo na live.
+<br/> <br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🛠 Tecnologias utilizadas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![ReactJS](https://img.shields.io/badge/ReactJS-17.0.2-green)
+![Firebase](https://img.shields.io/badge/Firebase-_-green)
+![TypeScript](https://img.shields.io/badge/TypeScript-4.1.2-green)
+![ContextAPI](https://img.shields.io/badge/Context_API-17.0.2-green)
+<br/> <br/>
 
-### `yarn test`
+## :arrow_upper_right: Evoluções e aprimoramentos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para evolução da aplicação e aprimoramento dos conhecimentos, foram desenvolvidas funcionalidades além do que foi desenvolvido na Next Level Week, como deixar a aplicação responsiva para diferentes tipos de dispositivos e tamanhos de telas, refatoração da estrutura de pastas e arquivos do projeto e adição da funcionalidade de tema escuro, que possibilita ao usuário alternar o tema ativo entre claro e escuro por meio de um botão.
 
-### `yarn build`
+## :pager: Design da aplicação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A imagem abaixo ilustra o design da aplicação.
+<img width="100%" src="https://user-images.githubusercontent.com/63478857/123531906-cae4ad00-d6de-11eb-890f-f9d7db566cd3.jpg"></img>
+<br/> <br/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🌐 Deploy
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Esta aplicação está configurada com integração contínua por meio do GitHub Actions para deploy automático no Firebase Hosting. Você pode visualizá-la através do link https://letmeask-ms.web.app/.
