@@ -3,14 +3,14 @@
   border-radius: 8px;
   overflow: hidden;
 
-  background: var(--var-color-white);
-  border: 1px solid var(--var-color-purple);
+  background: var(--var-color-input-background);
+  border: 1px solid var(--var-color-primary);
   cursor: pointer;
 
   display: flex;
 
   div {
-    background: var(--var-color-purple);
+    background: var(--var-color-primary);
     padding: 0 12px;
     display: flex;
     height: 100%;
@@ -34,9 +34,9 @@
 }
 
 .theme-dark .room-code {
-  background: var(--var-color-white-background-dark);
+  background: var(--var-color-input-background-dark-theme);
 
   span {
-    color: var(--var-color-white-background);
+    color: var(--var-color-text-dark-theme);
   }
 }

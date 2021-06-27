@@ -4,19 +4,19 @@
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
-  background: var(--var-color-purple);
+  background: var(--var-color-primary);
   border: 0;
   border-radius: 8px;
-  color: var(--var-color-white);
+  color: var(--var-color-button-text);
   font-weight: 500;
   cursor: pointer;
 
   transition: filter 0.2s;
 
   &.outlined {
-    background: var(--var-color-white);
-    border: 1px solid var(--var-color-purple);
-    color: var(--var-color-purple);
+    background: var(--var-color-input-background);
+    border: 1px solid var(--var-color-primary);
+    color: var(--var-color-primary);
   }
 
   &:not(:disabled):hover {

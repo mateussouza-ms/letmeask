@@ -101,6 +101,8 @@ export function AdminRoom() {
                 <>
                   <button
                     type="button"
+                    title="Marcar pergunta como respondida"
+                    className={question.isAnswered ? "active" : ""}
                     onClick={() => handleCheckQuestionAsAnswered(question.id)}
                   >
                     <img src={checkImg} alt="Marcar pergunta como respondida" />
@@ -108,6 +110,8 @@ export function AdminRoom() {
 
                   <button
                     type="button"
+                    title="Dar destaque à pergunta"
+                    className={question.isHighlighted ? "active" : ""}
                     onClick={() => handleHighlightQuestion(question.id)}
                   >
                     <img src={answerImg} alt="Dar destaque à pergunta" />
@@ -117,6 +121,7 @@ export function AdminRoom() {
 
               <button
                 type="button"
+                title="Excluir pergunta"
                 onClick={() => handleDeleteQuestion(question.id)}
               >
                 <img src={deleteImg} alt="Excluir pergunta" />

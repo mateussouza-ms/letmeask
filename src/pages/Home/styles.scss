@@ -8,8 +8,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: var(--var-color-purple);
-    color: var(--var-color-white);
+    background: var(--var-color-primary);
+    color: var(--var-color-button-text);
     padding: 2rem 2rem;
 
     .theme-control {
@@ -42,7 +42,7 @@
         font-size: 1rem;
         line-height: 2rem;
         margin-top: 1rem;
-        color: var(--var-color-white-background);
+        color: var(--var-color-text-dark-theme);
       }
     }
   }
@@ -74,10 +74,11 @@
         justify-content: center;
         align-items: center;
         gap: 0.8rem;
-        background: var(--var-color-red);
+        background: var(--var-color-input-background);
         border: 0;
         border-radius: 8px;
-        color: var(--var-color-white-background);
+        box-shadow: 3px 3px 5px var(--var-color-gray);
+        color: var(--var-color-text);
         font-weight: 500;
         cursor: pointer;
 
@@ -119,7 +120,7 @@
           height: 3.125rem;
           border-radius: 8px;
           padding: 0 1rem;
-          background: var(--var-color-white-background);
+          background: var(--var-color-input-background);
           border: 1px solid var(--var-color-gray);
         }
 

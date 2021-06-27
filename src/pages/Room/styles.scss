@@ -4,7 +4,7 @@
 
   header {
     padding: 1rem 1.5rem;
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: 1px solid var(--var-color-input-background);
     width: 100%;
 
     .content {
@@ -45,10 +45,10 @@
 
     span {
       margin-left: 1rem;
-      background: #e559f9;
+      background: var(--var-color-secondary);
       border-radius: 9999px;
       padding: 8px 16px;
-      color: var(--var-color-white);
+      color: var(--var-color-button-text);
       font-weight: 500;
       font-size: 0.875rem;
     }
@@ -60,7 +60,7 @@
       border: 0;
       padding: 1rem;
       border-radius: 8px;
-      background: var(--var-color-white);
+      background: var(--var-color-input-background);
       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.04);
       resize: vertical;
       min-height: 130px;
@@ -92,13 +92,13 @@
 
     > span {
       font-size: 0.875rem;
-      color: #737380;
+      color: var(--var-color-button-text);
       font-weight: 500;
 
       button {
         background: transparent;
         border: 0;
-        color: var(--var-color-purple);
+        color: var(--var-color-primary);
         text-decoration: underline;
         font-size: 0.875rem;
         font-weight: 500;
@@ -113,12 +113,13 @@
 
   &.theme-dark main form {
     textarea {
-      background: var(--var-color-white-background-dark);
+      background: var(--var-color-input-background-dark-theme);
       border: 1px solid var(--var-color-gray);
-      color: var(--var-color-white);
+      color: var(--var-color-text-dark-theme);
 
       &::placeholder {
-        color: var(--var-color-white);
+        color: var(--var-color-text-dark-theme);
+        filter: opacity(0.8);
       }
 
       &::-ms-input-placeholder {

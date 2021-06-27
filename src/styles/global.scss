@@ -7,23 +7,27 @@
 }
 
 :root {
-  --var-color-purple: #835afd;
-  --var-color-white: #fff;
-  --var-color-white-background: #f1f1f1;
+  --var-color-primary: #3a6085;
+  --var-color-secondary: #42aaff;
+  --var-color-app-background: #dee2e4;
+  --var-color-app-background-dark-theme: #22272e;
+  --var-color-input-background: #fff;
+  --var-color-input-background-dark-theme: #404041;
+  --var-color-text: #29292e;
+  --var-color-text-dark-theme: #f1f1f1;
+  --var-color-button-text: #fff;
   --var-color-red: #ea4335;
-  --var-color-gray: #a8a8b3;
-  --var-color-background-dark: #22272e;
-  --var-color-white-background-dark: #404041;
+  --var-color-gray: #818186;
 }
 
 body {
-  background: var(--var-color-white-background);
-  color: #29292e;
+  background: var(--var-color-app-background);
+  color: var(--var-color-text);
 }
 
 html body.theme-dark {
-  background: var(--var-color-background-dark);
-  color: #fff;
+  background: var(--var-color-app-background-dark-theme);
+  color: #f1f1f1;
 }
 
 body,

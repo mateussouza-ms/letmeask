@@ -9,20 +9,20 @@
   }
 
   &.highlighted {
-    background: #f4f0ff;
-    border: 1px solid var(--var-color-purple);
+    background: #d5ecd4;
+    border: 1px solid var(--var-color-primary);
 
     footer .user-info span {
-      color: #29292e;
+      color: var(--var-color-text);
     }
   }
 
   &.answered {
-    background: #dbdcdd;
+    background: #c4c4c4;
   }
 
   p {
-    color: #29292e;
+    color: var(--var-color-text);
   }
 
   footer {
@@ -65,12 +65,16 @@
           gap: 0.5rem;
 
           &.liked {
-            color: var(--var-color-purple);
+            color: var(--var-color-primary);
 
             svg path {
-              stroke: var(--var-color-purple);
+              stroke: var(--var-color-primary);
             }
           }
+        }
+
+        &.active img {
+          filter: saturate(65);
         }
 
         &:hover {
@@ -82,14 +86,49 @@
 }
 
 .theme-dark .question {
-  background: var(--var-color-white-background-dark);
+  background: var(--var-color-input-background-dark-theme);
   border: 1px solid var(--var-color-gray);
 
-  p {
-    color: var(--var-color-white);
+  &.highlighted {
+    background: #4d754d;
+    border: 1px solid var(--var-color-primary);
+
+    footer .user-info span {
+      color: var(--var-color-text-dark-theme);
+      opacity: 0.7;
+    }
   }
 
-  footer .user-info span {
-    color: var(--var-color-gray);
+  &.answered {
+    opacity: 0.6;
+  }
+
+  p {
+    color: var(--var-color-text-dark-theme);
+  }
+
+  footer {
+    .user-info span {
+      color: var(--var-color-text-dark-theme);
+      opacity: 0.7;
+    }
+
+    .actions {
+      button {
+        filter: brightness(170%);
+
+        &.like-button .liked {
+          color: var(--var-color-secondary);
+
+          svg path {
+            stroke: var(--var-color-secondary);
+          }
+        }
+
+        &:hover {
+          filter: brightness(10);
+        }
+      }
+    }
   }
 }
