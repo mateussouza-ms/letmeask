@@ -12,6 +12,16 @@
     color: var(--var-color-white);
     padding: 2rem 2rem;
 
+    .theme-control {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+
     .content {
       display: flex;
       flex-direction: column;
@@ -125,6 +135,7 @@
     }
   }
 }
+
 @media (max-width: 750px) {
   #page-auth {
     aside {

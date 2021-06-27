@@ -32,3 +32,11 @@
     text-overflow: ellipsis;
   }
 }
+
+.theme-dark .room-code {
+  background: var(--var-color-white-background-dark);
+
+  span {
+    color: var(--var-color-white-background);
+  }
+}

@@ -3,10 +3,14 @@ import { useHistory, useParams } from "react-router-dom";
 import { Button } from "../../components/Button";
 import { RoomCode } from "../../components/RoomCode";
 import { Question } from "../../components/Question";
+import { ToggleButton } from "../../components/ToggleButton";
 import { useRoom } from "../../hooks/useRoom";
+import { useTheme } from "../../hooks/useTheme";
 import { database } from "../../services/firebase";
 
 import logoImg from "../../assets/images/logo.svg";
+import lightLogoImg from "../../assets/images/logo-light.svg";
+
 import deleteImg from "../../assets/images/delete.svg";
 import checkImg from "../../assets/images/check.svg";
 import answerImg from "../../assets/images/answer.svg";
@@ -24,6 +28,7 @@ export function AdminRoom() {
   const roomId = params.id;
 
   const { title, questions } = useRoom(roomId);
+  const { currentTheme, handleToggleTheme } = useTheme();
 
   async function handleDeleteQuestion(questionId: string) {
     if (window.confirm("Você tem certeza que deseja excluir essa pergunta?")) {
@@ -50,10 +55,23 @@ export function AdminRoom() {
   }
 
   return (
-    <div id="page-room">
+    <div id="page-room" className={`theme-${currentTheme}`}>
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask logo" />
+          <div>
+            <img
+              src={currentTheme == "dark" ? lightLogoImg : logoImg}
+              alt="Letmeask logo"
+              className="logo"
+            />
+            <div className="theme-control">
+              <ToggleButton
+                checked={currentTheme === "dark"}
+                onToggle={handleToggleTheme}
+              />
+              <span>Tema escuro</span>
+            </div>
+          </div>
           <div>
             <RoomCode code={roomId} />
             <Button type="button" isOutlined onClick={handleEndRoom}>

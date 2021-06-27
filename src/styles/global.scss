@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  transition: background-color 0.5s, color 0.1s;
 }
 
 :root {
@@ -10,11 +12,18 @@
   --var-color-white-background: #f1f1f1;
   --var-color-red: #ea4335;
   --var-color-gray: #a8a8b3;
+  --var-color-background-dark: #22272e;
+  --var-color-white-background-dark: #404041;
 }
 
 body {
   background: var(--var-color-white-background);
   color: #29292e;
+}
+
+html body.theme-dark {
+  background: var(--var-color-background-dark);
+  color: #fff;
 }
 
 body,

@@ -80,3 +80,16 @@
     }
   }
 }
+
+.theme-dark .question {
+  background: var(--var-color-white-background-dark);
+  border: 1px solid var(--var-color-gray);
+
+  p {
+    color: var(--var-color-white);
+  }
+
+  footer .user-info span {
+    color: var(--var-color-gray);
+  }
+}

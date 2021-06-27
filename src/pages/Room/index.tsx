@@ -4,11 +4,14 @@ import { useParams } from "react-router-dom";
 import { Button } from "../../components/Button";
 import { RoomCode } from "../../components/RoomCode";
 import { Question } from "../../components/Question";
+import { ToggleButton } from "../../components/ToggleButton";
 import { useAuth } from "../../hooks/useAuth";
 import { useRoom } from "../../hooks/useRoom";
+import { useTheme } from "../../hooks/useTheme";
 import { database } from "../../services/firebase";
 
 import logoImg from "../../assets/images/logo.svg";
+import lightLogoImg from "../../assets/images/logo-light.svg";
 
 import "./styles.scss";
 
@@ -20,6 +23,8 @@ export function Room() {
   const [newQuestion, setNewQuestion] = useState("");
 
   const { user } = useAuth();
+  const { currentTheme, handleToggleTheme } = useTheme();
+
   const params = useParams<RoomParams>();
   const roomId = params.id;
 
@@ -66,10 +71,23 @@ export function Room() {
   }
 
   return (
-    <div id="page-room">
+    <div id="page-room" className={`theme-${currentTheme}`}>
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask logo" />
+          <div>
+            <img
+              src={currentTheme == "dark" ? lightLogoImg : logoImg}
+              alt="Letmeask logo"
+              className="logo"
+            />
+            <div className="theme-control">
+              <ToggleButton
+                checked={currentTheme === "dark"}
+                onToggle={handleToggleTheme}
+              />
+              <span>Tema escuro</span>
+            </div>
+          </div>
           <RoomCode code={roomId} />
         </div>
       </header>

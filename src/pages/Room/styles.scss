@@ -1,11 +1,11 @@
 #page-room {
-  padding: 0 1.5rem 1.5rem;
+  padding-bottom: 1.5rem;
   width: 100vw;
 
   header {
-    padding: 1rem 0;
+    padding: 1rem 1.5rem;
     border-bottom: 1px solid #e2e2e2;
-    max-width: 100%;
+    width: 100%;
 
     .content {
       max-width: 100%;
@@ -15,8 +15,15 @@
       align-items: center;
       gap: 1rem;
 
-      > img {
-        max-height: 45px;
+      div {
+        img {
+          max-height: 45px;
+        }
+        .theme-control {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
       }
     }
   }
@@ -78,7 +85,6 @@
 
       span {
         margin-left: 0.5rem;
-        color: #29292e;
         font-weight: 500;
         font-size: 0.875rem;
       }
@@ -103,6 +109,22 @@
 
   .question-list {
     margin-top: 2rem;
+  }
+
+  &.theme-dark main form {
+    textarea {
+      background: var(--var-color-white-background-dark);
+      border: 1px solid var(--var-color-gray);
+      color: var(--var-color-white);
+
+      &::placeholder {
+        color: var(--var-color-white);
+      }
+
+      &::-ms-input-placeholder {
+        color: red;
+      }
+    }
   }
 }
 
