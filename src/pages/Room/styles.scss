@@ -129,21 +129,35 @@
   }
 }
 
+@media (max-width: 750px) {
+  main {
+    padding: 0 1.5rem;
+  }
+}
+
 @media (max-width: 420px) {
-  #page-room header .content {
-    flex-direction: column;
-    gap: 0.5rem;
+  #page-room {
+    header .content {
+      flex-direction: column;
+      gap: 0.5rem;
 
-    & > div {
-      width: 100%;
+      & > div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
 
-      button.room-code {
-        flex: 5;
-      }
+        button.room-code {
+          flex: 5;
+        }
 
-      button {
-        flex: 3;
+        button {
+          flex: 3;
+        }
       }
     }
+  }
+
+  main {
+    padding: 0 1.5rem;
   }
 }
