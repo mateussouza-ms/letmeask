@@ -14,13 +14,19 @@ type ThemeContextProvideProps = {
 export const ThemeContext = createContext({} as ThemeContextType);
 
 export function ThemeContextProvider({ children }: ThemeContextProvideProps) {
-  const [currentTheme, setCurrentTheme] = useState<Theme>("light");
+  const storedTheme = localStorage.getItem("letmeask:theme") as Theme;
+
+  const [currentTheme, setCurrentTheme] = useState<Theme>(
+    storedTheme || "light"
+  );
 
   function handleToggleTheme() {
     setCurrentTheme(currentTheme === "light" ? "dark" : "light");
   }
 
   useEffect(() => {
+    localStorage.setItem("letmeask:theme", currentTheme);
+
     document.body.className = `theme-${currentTheme}`;
   }, [currentTheme]);
 
