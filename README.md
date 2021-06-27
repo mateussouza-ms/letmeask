@@ -26,7 +26,7 @@ Para evolução da aplicação e aprimoramento dos conhecimentos, foram desenvol
 ## :pager: Design da aplicação
 
 A imagem abaixo ilustra o design da aplicação.
-<img width="100%" src="https://user-images.githubusercontent.com/63478857/123531906-cae4ad00-d6de-11eb-890f-f9d7db566cd3.jpg"></img>
+<img width="100%" src="https://user-images.githubusercontent.com/63478857/123559466-8b67a080-d772-11eb-9d61-d8e3d9b0d82c.jpg"></img>
 <br/> <br/>
 
 ## 🌐 Deploy
