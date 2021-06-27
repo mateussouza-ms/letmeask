@@ -76,7 +76,7 @@ export function Room() {
         <div className="content">
           <div>
             <img
-              src={currentTheme == "dark" ? lightLogoImg : logoImg}
+              src={currentTheme === "dark" ? lightLogoImg : logoImg}
               alt="Letmeask logo"
               className="logo"
             />
