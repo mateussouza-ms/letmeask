@@ -17,11 +17,23 @@ export function ThemeContextProvider({ children }: ThemeContextProvideProps) {
   const storedTheme = localStorage.getItem("letmeask:theme") as Theme;
 
   const [currentTheme, setCurrentTheme] = useState<Theme>(
-    storedTheme || "light"
+    storedTheme || getSystemTheme()
   );
 
   function handleToggleTheme() {
     setCurrentTheme(currentTheme === "light" ? "dark" : "light");
+  }
+
+  function getSystemTheme() {
+    const systemThemeIsDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    if (systemThemeIsDark) {
+      return "dark";
+    }
+
+    return "light";
   }
 
   useEffect(() => {
